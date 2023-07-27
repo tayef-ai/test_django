@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Main Title{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+    <div class="container mt-5">
+    <h1 class="text-center alert alert-info">Hello Django</h1>
+    {% block content %}
+    {% endblock content %}
+</div>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

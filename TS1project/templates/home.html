@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+{{title}}
+{% endblock title %}
+{% block content %}
+<h2>{{name|truncatechars:2}}</h2>
+    <h4>{{dt|date:"SHORT_DATE_FORMAT"}} {{dt|time:"TIME_FORMAT"}}</h4>
+    {% if mark >= 80 and mark <= 90 %}
+    <h2>A++</h2>
+    {% elif mark > 50 %}
+    <h2>OK</h2>
+    {% else %}
+    <h2>Passed</h2>
+    {% endif %}
+    <hr/>
+    <h1>{{id}}</h1>
+{% endblock content %}

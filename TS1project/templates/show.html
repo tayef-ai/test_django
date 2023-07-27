@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<a class="btn btn-warning" href="{% url 'input' %}">Add New</a>
+{% for dt in data %}
+<h1>Name: {{dt.name}}</h1>
+<h3>Email: {{dt.email}}</h3>
+{% if dt.image %}
+<img src="{{dt.image.url}}" class="rounded d-block" width="100px" height="100px">
+{% endif %}
+<hr/>
+{% endfor %}
+{% endblock content %}
+
